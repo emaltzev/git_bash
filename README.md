@@ -93,3 +93,84 @@
   </tr>
 </table>
 <hr>
+<h3>Задача 2:</h3>
+<table>
+  <tr>
+    <th>Задание</th>
+    <th>Выполненная команда</th>
+  </tr>
+  <tr>
+    <td>Создать домашнюю директорию через терминал</td>
+    <td>$ mkdir homedir</td>
+  </tr>
+  <tr>
+    <td>Зайти в домашнюю директорию через терминал.</td>
+    <td>$ cd homedir</td>
+  </tr>
+  <tr>
+    <td>Создать папку test 3</td>
+    <td>$ mkdir test3</td>
+  </tr>
+  <tr>
+    <td>Добавить в папку test 3 три файла 4, 5 и 6, в каждом из которых должно быть по 4 строки row1, row2, row3, row4</td>
+    <td>$ echo -e "row1\nrow2\nrow3\nrow4" >> test3/file4.txt && echo -e "row1\nrow2\nrow3\nrow4" >> test3/file5.txt && echo -e "row1\nrow2\nrow3\nrow4" >> test3/file6.txt</td>
+  </tr>
+  <tr>
+    <td>Найдите строку row2 в файле 5</td>
+    <td>$ cat test3/file5.txt | grep "row2"</td>
+  </tr>
+  <tr>
+    <td>Найдите строку row в папке test3</td>
+    <td>$ grep -r 'row' test3</td>
+  </tr>
+  <tr>
+    <td>Посчитайте сколько строк с содержимым row в файле 6</td>
+    <td>$ grep -c 'row' test3/file6.txt</td>
+  </tr>
+  <tr>
+    <td>Найдите файл 5 внутри папки test3</td>
+    <td>$ find ./test3 -name "*file5*"</td>
+  </tr>
+  <tr>
+    <td>Используя команду find, удалите файл 5</td>
+    <td>$ find ./test3 -name "*file5*" -delete</td>
+  </tr>
+  <tr>
+    <td>Используя команду echo, добавьте слово test в файл 4</td>
+    <td>$ echo "test" >> test3/file4.txt</td>
+  </tr>
+  <tr>
+    <td>Замените слово test в файле 4 на fail</td>
+    <td>$ sed "s/test/fail/g" test3/file4.txt -i</td>
+  </tr>
+  <tr>
+    <td>Добавьте в файл 4 слово test так, чтобы сохранилось содержимое</td>
+    <td>$ echo "test" >> test3/file4.txt</td>
+  </tr>
+  <tr>
+    <td>Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе</td>
+    <td>$ ps aux</td>
+  </tr>
+  <tr>
+    <td>Убейте процесс 666 в консоли</td>
+    <td>$ kill 666</td>
+  </tr>
+  <tr>
+    <td>Узнайте доступность ресурса rusau.net, используя ping</td>
+    <td>$ ping rusau.net && echo available || echo unavailable</td>
+  </tr>
+  <tr>
+    <td>Отправьте 5 пакетов на сайт rusau.net</td>
+    <td>$ ping -c 5 rusau.net</td>
+  </tr>
+  <tr>
+    <td>Используя GET и команду curl, получите информацию о зарегистрированных питомцах с любым статусом на https://petstore.swagger.io/</td>
+    <td>$ curl https://petstore.swagger.io/v2/pet/findByStatus?status=available</td>
+  </tr>
+  <tr>
+    <td>Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/</td>
+    <td>$ curl -X POST -H "api_key: special-key" -H "Content-Type: application/json" -d '{"id": 57687, "username": "Saur", "firstName": "Evgeny", "lastName": "Maltsev", "email": "rtyo@mail.ru", "password": "1234567", "phone": "7654321", "userStatus": 0}'
+      
+  https://petstore.swagger.io/v2/user </td>
+  </tr>
+</table>
